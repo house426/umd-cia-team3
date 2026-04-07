@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumer Insights &amp; Analytics | Program Details</title>
+<style>
+    :root {
+        --maroon: #6b0f1a;
+        --maroon-deep: #4f0a13;
+        --gold: #d6ad3d;
+        --paper: #fffaf5;
+        --fog: #f8f0ec;
+        --ink: #24171a;
+        --muted: #6d5a5f;
+        --line: rgba(107, 15, 26, 0.12);
+        --card: rgba(255, 255, 255, 0.84);
+        --shadow: 0 18px 38px rgba(107, 15, 26, 0.12);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+            radial-gradient(circle at top right, rgba(107, 15, 26, 0.12), transparent 28%),
+            linear-gradient(180deg, #fff9f4 0%, #f7ecda 100%);
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+    }
+
+    .prototype-note {
+        background: var(--maroon-deep);
+        color: white;
+        text-align: center;
+        padding: 10px 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    header {
+        padding: 22px 0 10px;
+    }
+
+    .crumbs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .crumbs a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: var(--maroon);
+    }
+
+    .hero {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+        padding: 34px;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(107, 15, 26, 0.1);
+        color: var(--maroon);
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.76rem;
+        font-weight: 700;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        line-height: 1.08;
+    }
+
+    h1 {
+        font-size: clamp(2.4rem, 4vw, 4.2rem);
+    }
+
+    p, li {
+        color: var(--muted);
+        line-height: 1.72;
+    }
+
+    main {
+        padding: 22px 0 56px;
+    }
+
+    .section {
+        margin-top: 22px;
+        padding: 30px;
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        box-shadow: var(--shadow);
+    }
+
+    .grid-2,
+    .grid-3 {
+        display: grid;
+        gap: 18px;
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px;
+    }
+
+    ul {
+        margin: 0;
+        padding-left: 18px;
+    }
+
+    .tool-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .tool {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: var(--fog);
+        border: 1px solid rgba(107, 15, 26, 0.14);
+        color: var(--maroon);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .cta {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        background: var(--maroon);
+        color: white;
+    }
+
+    @media (max-width: 900px) {
+        .grid-2,
+        .grid-3,
+        .cta {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .wrap {
+            width: min(1120px, calc(100% - 22px));
+        }
+
+        .hero,
+        .section {
+            padding: 22px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="prototype-note">Program details draft: early structure and layout planning beyond the main page</div>
+
+    <header class="wrap">
+        <div class="crumbs">
+            <a href="CIA Website.html">&larr; Back to main page</a>
+            <a href="#cta">Jump to next steps</a>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <span class="eyebrow">Program details page</span>
+            <h1>Additional page for deeper program content</h1>
+            <p>
+                This second page shows that the site is already moving beyond the homepage into a fuller student experience. The content here expands on courses, skills, program strengths, and the early shape of a next-step section.
+            </p>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">Areas of study</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Course planning layout</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Core courses</h3>
+                    <ul>
+                        <li>Finance and accounting</li>
+                        <li>Business law</li>
+                        <li>Economics</li>
+                        <li>Information technology</li>
+                        <li>Management</li>
+                        <li>Marketing</li>
+                        <li>Psychology</li>
+                        <li>Writing and communications</li>
+                        <li>Mathematics</li>
+                    </ul>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Major courses</h3>
+                    <ul>
+                        <li>Marketing</li>
+                        <li>Marketing research</li>
+                        <li>Consumer behavior</li>
+                        <li>Analytics</li>
+                        <li>Big data</li>
+                        <li>Data visualization</li>
+                        <li>Advanced modeling</li>
+                        <li>Data transformation</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">Acquired skills</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Skills and software section draft</h2>
+            <div class="grid-3">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Manage and analyze data</h3>
+                    <p>Students use industry software tools to summarize, clean, and analyze consumer and transaction data.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Generate insights</h3>
+                    <p>The page draft highlights identifying customer needs, sales trends, and business opportunities from data.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Communicate results</h3>
+                    <p>Recommendations are framed for stakeholders, not just technical audiences, which fits the business emphasis of the program.</p>
+                </article>
+            </div>
+            <div class="tool-row">
+                <span class="tool">Excel</span>
+                <span class="tool">Power BI</span>
+                <span class="tool">Tableau</span>
+                <span class="tool">SQL</span>
+                <span class="tool">SAS</span>
+                <span class="tool">R</span>
+                <span class="tool">Python</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">Program advantage</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Why this page matters in the site draft</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Evidence of deeper site planning</h3>
+                    <p>The layout begins organizing mentorship, lab access, industry projects, internships, competitions, and advisory board support into a page visitors can scan.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Room for expansion</h3>
+                    <p>This structure can later grow into tabs, accordions, student outcomes, internships, or a full academic catalog summary without rebuilding the page from scratch.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="cta">
+            <div class="cta">
+                <div>
+                    <span class="eyebrow">Contact planning</span>
+                    <h2 style="font-size: 2rem;">Next-step section draft</h2>
+                    <p>This closing block is an early placeholder for request information, application guidance, and visit campus links.</p>
+                </div>
+                <a class="button" href="CIA Website.html">Return to homepage</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
