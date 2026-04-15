@@ -1,0 +1,10 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="640" rx="120" fill="#F7ECDA"/>
+  <rect x="54" y="54" width="532" height="532" rx="94" fill="#6B0F1A"/>
+  <path d="M168 322C168 239.157 235.157 172 318 172H376V236H322C274.503 236 236 274.503 236 322C236 369.497 274.503 408 322 408H376V472H318C235.157 472 168 404.843 168 322Z" fill="#D6AD3D"/>
+  <rect x="288" y="204" width="64" height="236" rx="28" fill="#F7ECDA"/>
+  <path d="M426 472L464.172 398H533L477.328 292.5L441.414 360.5H370L442.758 224H510.844L584 360.5L524.344 472H426Z" fill="#D6AD3D"/>
+  <circle cx="474" cy="182" r="26" fill="#F7ECDA"/>
+  <path d="M204 506H436" stroke="#F7ECDA" stroke-width="18" stroke-linecap="round" opacity="0.9"/>
+  <text x="320" y="566" text-anchor="middle" fill="#F7ECDA" font-size="48" font-family="Arial, Helvetica, sans-serif" font-weight="700" letter-spacing="8">CIA CLUB</text>
+</svg>
