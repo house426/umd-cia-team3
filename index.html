@@ -41,6 +41,10 @@
         margin: 0 auto;
     }
 
+    .section-anchor {
+        scroll-margin-top: 92px;
+    }
+
     .prototype-note {
         background: var(--maroon-deep);
         color: white;
@@ -70,6 +74,21 @@
 
     .brand {
         display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .brand img {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 24px rgba(107, 15, 26, 0.18);
+    }
+
+    .brand-copy {
+        display: flex;
         flex-direction: column;
         gap: 4px;
     }
@@ -97,6 +116,12 @@
         text-decoration: none;
         color: var(--muted);
         font-weight: 700;
+        transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+        color: var(--maroon);
+        transform: translateY(-1px);
     }
 
     .hero {
@@ -118,6 +143,19 @@
 
     .hero-copy {
         padding: 40px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-copy::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        bottom: -70px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(214, 173, 61, 0.22), rgba(214, 173, 61, 0) 70%);
     }
 
     .eyebrow {
@@ -144,6 +182,10 @@
         max-width: 10ch;
     }
 
+    h2 {
+        text-wrap: balance;
+    }
+
     p {
         line-height: 1.72;
         color: var(--muted);
@@ -165,11 +207,17 @@
         text-decoration: none;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
     }
 
     .button-primary {
         background: var(--maroon);
         color: white;
+        box-shadow: 0 14px 28px rgba(79, 10, 19, 0.2);
     }
 
     .button-secondary {
@@ -187,6 +235,22 @@
 
     .hero-side p {
         color: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-visual {
+        margin-top: 18px;
+        padding: 18px;
+        border-radius: 22px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-visual img {
+        width: 100%;
+        display: block;
+        border-radius: 16px;
+        object-fit: cover;
+        max-height: 250px;
     }
 
     .metrics {
@@ -242,11 +306,18 @@
         border-radius: 22px;
         background: rgba(255, 255, 255, 0.7);
         border: 1px solid var(--line);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
     }
 
     .card h3 {
         margin-bottom: 12px;
         font-size: 1.3rem;
+    }
+
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 16px 30px rgba(107, 15, 26, 0.08);
+        border-color: rgba(107, 15, 26, 0.18);
     }
 
     .tag-row {
@@ -272,6 +343,30 @@
         grid-template-columns: 1fr auto;
         gap: 20px;
         align-items: center;
+    }
+
+    .quote-band {
+        margin-top: 24px;
+        padding: 30px 32px;
+        border-radius: 28px;
+        background:
+            linear-gradient(135deg, rgba(79, 10, 19, 0.97), rgba(107, 15, 26, 0.92)),
+            var(--maroon);
+        color: white;
+        box-shadow: var(--shadow);
+    }
+
+    .quote-band p {
+        color: rgba(255, 255, 255, 0.84);
+        max-width: 70ch;
+        margin: 12px 0 0;
+    }
+
+    .quote-band strong {
+        display: block;
+        font-size: 1.35rem;
+        line-height: 1.5;
+        color: white;
     }
 
     footer {
@@ -314,16 +409,21 @@
 </style>
 </head>
 <body>
-    <div class="prototype-note">Consumer Insights &amp; Analytics site draft: early structure, navigation, content, and styling</div>
+    <div class="prototype-note">University of Minnesota Duluth | Consumer Insights &amp; Analytics</div>
 
     <header>
         <div class="wrap nav-row">
             <div class="brand">
-                <small>Business Website Draft</small>
-                <strong>Consumer Insights &amp; Analytics</strong>
+                <img src="cia-logo.svg" alt="CIA Club logo">
+                <div class="brand-copy">
+                    <small>LSBE Program + CIA Club</small>
+                    <strong>Consumer Insights &amp; Analytics</strong>
+                </div>
             </div>
             <nav>
                 <a href="#overview">Overview</a>
+                <a href="#club">CIA Club</a>
+                <a href="#spotlight">Student Spotlight</a>
                 <a href="#careers">Careers</a>
                 <a href="#value">Why CIA</a>
                 <a href="program-details.html">Program Details</a>
@@ -333,20 +433,20 @@
     </header>
 
     <main class="wrap">
-        <section class="hero" id="overview">
+        <section class="hero section-anchor" id="overview">
             <div class="hero-grid">
                 <div class="panel hero-copy">
-                    <span class="eyebrow">Main page hero</span>
+                    <span class="eyebrow">Consumer insights and analytics</span>
                     <h1>Create actionable insights from customer data</h1>
                     <p>
-                        This early site draft is being shaped around the Consumer Insights &amp; Analytics program. The content focuses on turning consumer behavior and transaction data into business recommendations, while the design begins to establish a cleaner, more modern academic program look.
+                        Do you aspire to help organizations make better strategic decisions based on data rather than opinion? Does the prospect of analyzing data to reveal insights excite you? Would you like to study why and how consumers interact with the marketplace, products, and services?
                     </p>
                     <p>
-                        The program is designed for students who want to study how people interact with products, services, and the marketplace, then use data to support stronger strategic decisions.
+                        If so, the Consumer Insights and Analytics major may be a great fit for you. Students learn to transform consumer data related to buying behaviors into insights and actionable recommendations for organizations, then present those insights as solutions to real business problems.
                     </p>
                     <div class="hero-actions">
                         <a class="button button-primary" href="program-details.html">View program details</a>
-                        <a class="button button-secondary" href="#contact">Request information</a>
+                        <a class="button button-secondary" href="mailto:ssharkey@d.umn.edu">Contact Steve Sharkey</a>
                     </div>
                     <div class="tag-row">
                         <span class="tag">Selective cohort</span>
@@ -357,9 +457,9 @@
                 </div>
 
                 <aside class="panel hero-side">
-                    <span class="eyebrow" style="background: rgba(255,255,255,0.12); color: white;">Program stats panel</span>
-                    <h2 style="font-size: 1.8rem;">Homepage sidebar concepts</h2>
-                    <p>These blocks help show how the homepage can quickly communicate value to prospective students.</p>
+                    <span class="eyebrow" style="background: rgba(255,255,255,0.12); color: white;">At a glance</span>
+                    <h2 style="font-size: 1.8rem;">Program highlights</h2>
+                    <p>Built to recruit future students, explain the program clearly, and highlight the CIA Club experience.</p>
                     <div class="metrics">
                         <div class="metric">
                             <strong>100%</strong>
@@ -378,45 +478,98 @@
                             <span>Projects and competitions tied to industry needs.</span>
                         </div>
                     </div>
+                    <div class="hero-visual">
+                        <img src="team-data-doodlers.jpg" alt="CIA students celebrating a first-place win at the Analytics for Good Hackathon">
+                    </div>
                 </aside>
             </div>
         </section>
 
-        <section class="panel section">
+        <section class="panel section section-anchor">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Basic layout section</span>
-                    <h2 style="font-size: 2.1rem;">Core homepage content blocks</h2>
+                    <span class="eyebrow">Program overview</span>
+                    <h2 style="font-size: 2.1rem;">What students can expect</h2>
                 </div>
                 <p>
-                    This section shows the planned homepage structure: an introduction, benefits overview, and clear pathways into careers and deeper program information.
+                    The major blends customer understanding, analytics, communication, and hands-on learning so students can build practical experience before graduation.
                 </p>
             </div>
 
             <div class="grid-3">
                 <article class="card">
-                    <h3>Program overview</h3>
-                    <p>Students learn to transform consumer data related to buying behaviors into insights and actionable recommendations for organizations.</p>
+                    <h3>Analytics with purpose</h3>
+                    <p>Students study how consumers interact with products, services, and the marketplace, then use that data to support stronger decisions.</p>
                 </article>
                 <article class="card">
-                    <h3>Hands-on environment</h3>
-                    <p>Draft messaging highlights lab access, specialized software, industry datasets, and club participation in analytics competitions.</p>
+                    <h3>Hands-on learning</h3>
+                    <p>Students have 24/7 access to a state-of-the-art analytics lab with sophisticated software tools and industry datasets.</p>
                 </article>
                 <article class="card">
                     <h3>Business communication</h3>
-                    <p>Homepage copy also emphasizes presenting insights as solutions to business problems rather than reporting data in isolation.</p>
+                    <p>Students learn to present their insights as solutions to business problems rather than simply reporting numbers in isolation.</p>
                 </article>
             </div>
         </section>
 
-        <section class="panel section" id="careers">
+        <section class="panel section section-anchor" id="club">
             <div class="section-head">
                 <div>
-                    <span class="eyebrow">Draft content section</span>
-                    <h2 style="font-size: 2.1rem;">Early careers snapshot</h2>
+                    <span class="eyebrow">CIA club</span>
+                    <h2 style="font-size: 2.1rem;">A student community built around experience, access, and cohorts</h2>
                 </div>
                 <p>
-                    The homepage includes concise career examples to help visitors quickly understand where the major can lead.
+                    Active club members participate in regional undergraduate analytics competitions while building connections with peers, faculty, and industry professionals.
+                </p>
+            </div>
+
+            <div class="grid-3">
+                <article class="card">
+                    <h3>Experiences</h3>
+                    <p>The club adds value through competitions, guest speakers, projects, and other opportunities that connect classroom learning to professional experience.</p>
+                </article>
+                <article class="card">
+                    <h3>Access</h3>
+                    <p>Students gain access to industry perspectives, networking opportunities, and guidance that helps them explore careers and strengthen professional readiness.</p>
+                </article>
+                <article class="card">
+                    <h3>Cohorts</h3>
+                    <p>The club strengthens the cohort model by helping students build relationships, collaborate closely, and grow as a supportive learning community.</p>
+                </article>
+            </div>
+
+            <div class="grid-2" style="margin-top: 18px;">
+                <article class="card">
+                    <h3>Leadership</h3>
+                    <p>Steve Sharkey leads the CIA Club and brings more than 30 years of experience in retail, broadcasting, and publishing.</p>
+                </article>
+                <article class="card">
+                    <h3>Club identity</h3>
+                    <p><img src="cia-logo.svg" alt="CIA Club logo" style="width: 110px; height: 110px; display: block; margin-bottom: 14px;"></p>
+                    <p>The maroon-and-gold identity gives the club a recognizable mark that fits the overall program website and presentation materials.</p>
+                </article>
+            </div>
+
+            <div class="grid-2" style="margin-top: 18px;">
+                <article class="card">
+                    <h3>Contact</h3>
+                    <p>For CIA Club information, contact Steve Sharkey at <a href="mailto:ssharkey@d.umn.edu">ssharkey@d.umn.edu</a>.</p>
+                </article>
+                <article class="card">
+                    <h3>Use of the logo</h3>
+                    <p>The logo can be used on the site header, student materials, club slides, and future event promotion for a consistent visual identity.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="panel section section-anchor" id="careers">
+            <div class="section-head">
+                <div>
+                    <span class="eyebrow">Career paths</span>
+                    <h2 style="font-size: 2.1rem;">Where this program can lead</h2>
+                </div>
+                <p>
+                    Graduates can apply consumer insight and analytics skills across marketing, research, digital strategy, retail planning, and business analysis roles.
                 </p>
             </div>
 
@@ -426,35 +579,78 @@
                     <p>Marketing and market research, digital and social media analyst roles, inventory planning, e-commerce, business analyst, and customer experience analyst.</p>
                 </article>
                 <article class="card">
-                    <h3>Value proposition</h3>
-                    <p>As decision-making becomes more data-driven, graduates can apply customer insight and analytics skills across many industries.</p>
+                    <h3>Why it matters</h3>
+                    <p>As decision-making becomes more data-driven, organizations need people who can connect analytics to customer behavior and business strategy.</p>
                 </article>
             </div>
         </section>
 
-        <section class="panel section" id="value">
-            <div class="split-callout">
+        <section class="panel section section-anchor" id="spotlight">
+            <div class="section-head">
                 <div>
-                    <span class="eyebrow">Navigation and CTA planning</span>
-                    <h2 style="font-size: 2.1rem;">Site includes a second page</h2>
-                    <p>
-                        To show progress beyond the homepage, the navigation links into a started program details page with course areas, acquired skills, competitive advantages, and contact planning.
-                    </p>
+                    <span class="eyebrow">Student spotlight</span>
+                    <h2 style="font-size: 2.1rem;">Team Data Doodlers took first place</h2>
                 </div>
-                <a class="button button-primary" href="program-details.html">Open additional page</a>
+                <p>
+                    CIA students are not only learning analytics in the classroom. They are also competing and succeeding in high-level events beyond campus.
+                </p>
+            </div>
+
+            <div class="card" style="padding: 18px; margin-bottom: 18px;">
+                <img src="team-data-doodlers.jpg" alt="Team Data Doodlers posing together after winning first place at the Analytics for Good Hackathon" style="width: 100%; max-height: 560px; object-fit: cover; border-radius: 18px; display: block;">
+            </div>
+
+            <div class="grid-2">
+                <article class="card">
+                    <h3>The winning team</h3>
+                    <p>Team Data Doodlers was made up of LSBE CIA students Jordan Carlson, Megan Gehling, Ella Green, Reilly Sullivan, Laura Tsai, and Natalya Wilkes.</p>
+                    <p>The team recently competed in the undergraduate division of the Analytics for Good Hackathon at the University of Minnesota Carlson School of Management.</p>
+                </article>
+                <article class="card">
+                    <h3>The result</h3>
+                    <p>They won first place and were recognized as champions of the event.</p>
+                    <p>This achievement reflects the kind of preparation, teamwork, and applied problem-solving that the CIA program and club are designed to support.</p>
+                </article>
             </div>
         </section>
 
-        <section class="panel section" id="contact">
-            <span class="eyebrow">Initial contact area</span>
-            <h2 style="font-size: 2.1rem;">Next-step content block</h2>
+        <section class="quote-band">
+            <span class="eyebrow" style="background: rgba(255,255,255,0.14); color: white;">Why LSBE loves this</span>
+            <strong>
+                Winning teams, strong cohorts, and visible student success show what makes Consumer Insights &amp; Analytics more than a major. It is a community that prepares students to compete and lead.
+            </strong>
             <p>
-                Draft call to action: request information, review the application process, or visit the campus admissions page. In a later version this can become a stronger CTA band or inquiry form.
+                From classroom analysis to regional competitions, the site now reflects the kind of momentum Steve can point to when talking about the program and the CIA Club.
             </p>
         </section>
 
+        <section class="panel section section-anchor" id="value">
+            <div class="split-callout">
+                <div>
+                    <span class="eyebrow">Learn more</span>
+                    <h2 style="font-size: 2.1rem;">Explore the full program details</h2>
+                    <p>
+                        Visit the program details page for course areas, software, acquired skills, and a closer look at what makes the CIA experience distinctive.
+                    </p>
+                </div>
+                <a class="button button-primary" href="program-details.html">Open program details</a>
+            </div>
+        </section>
+
+        <section class="panel section section-anchor" id="contact">
+            <span class="eyebrow">Contact</span>
+            <h2 style="font-size: 2.1rem;">Take the next step</h2>
+            <p>
+                To learn more about the program or the CIA Club, contact Steve Sharkey at <a href="mailto:ssharkey@d.umn.edu">ssharkey@d.umn.edu</a>.
+            </p>
+            <div class="hero-actions">
+                <a class="button button-primary" href="mailto:ssharkey@d.umn.edu">Email Steve Sharkey</a>
+                <a class="button button-secondary" href="program-details.html">Review program details</a>
+            </div>
+        </section>
+
         <footer>
-            Site draft built from the current page plus adapted content from the UMD LSBE Consumer Insights &amp; Analytics page.
+            Content adapted from the UMD LSBE Consumer Insights &amp; Analytics page.
         </footer>
     </main>
 </body>
