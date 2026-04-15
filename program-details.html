@@ -67,6 +67,11 @@
         font-family: Arial, Helvetica, sans-serif;
         font-weight: 700;
         color: var(--maroon);
+        transition: color 0.2s ease;
+    }
+
+    .crumbs a:hover {
+        color: var(--maroon-deep);
     }
 
     .hero {
@@ -75,6 +80,19 @@
         border-radius: 28px;
         box-shadow: var(--shadow);
         padding: 34px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(214, 173, 61, 0.22), rgba(214, 173, 61, 0) 70%);
     }
 
     .eyebrow {
@@ -137,6 +155,12 @@
         border: 1px solid var(--line);
         border-radius: 20px;
         padding: 22px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 26px rgba(107, 15, 26, 0.08);
     }
 
     ul {
@@ -180,6 +204,12 @@
         font-weight: 700;
         background: var(--maroon);
         color: white;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(79, 10, 19, 0.18);
     }
 
     @media (max-width: 900px) {
@@ -203,27 +233,30 @@
 </style>
 </head>
 <body>
-    <div class="prototype-note">Program details draft: early structure and layout planning beyond the main page</div>
+    <div class="prototype-note">University of Minnesota Duluth | Program Details</div>
 
     <header class="wrap">
         <div class="crumbs">
-            <a href="CIA Website.html">&larr; Back to main page</a>
+            <a href="index.html">&larr; Back to main page</a>
             <a href="#cta">Jump to next steps</a>
         </div>
     </header>
 
     <main class="wrap">
         <section class="hero">
-            <span class="eyebrow">Program details page</span>
-            <h1>Additional page for deeper program content</h1>
+            <span class="eyebrow">Consumer insights and analytics</span>
+            <h1>Program details</h1>
             <p>
-                This second page shows that the site is already moving beyond the homepage into a fuller student experience. The content here expands on courses, skills, program strengths, and the early shape of a next-step section.
+                This page expands on courses, software, skills, and the distinctive advantages that shape the Consumer Insights &amp; Analytics experience.
+            </p>
+            <p style="margin-top: 18px;">
+                <img src="cia-logo.svg" alt="CIA Club logo" style="width: 112px; height: 112px; border-radius: 20px; box-shadow: 0 12px 30px rgba(107, 15, 26, 0.14);">
             </p>
         </section>
 
         <section class="section">
             <span class="eyebrow">Areas of study</span>
-            <h2 style="font-size: 2rem; margin-bottom: 18px;">Course planning layout</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Coursework</h2>
             <div class="grid-2">
                 <article class="card">
                     <h3 style="margin-bottom: 12px;">Core courses</h3>
@@ -257,7 +290,7 @@
 
         <section class="section">
             <span class="eyebrow">Acquired skills</span>
-            <h2 style="font-size: 2rem; margin-bottom: 18px;">Skills and software section draft</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Skills and software</h2>
             <div class="grid-3">
                 <article class="card">
                     <h3 style="margin-bottom: 12px;">Manage and analyze data</h3>
@@ -265,11 +298,11 @@
                 </article>
                 <article class="card">
                     <h3 style="margin-bottom: 12px;">Generate insights</h3>
-                    <p>The page draft highlights identifying customer needs, sales trends, and business opportunities from data.</p>
+                    <p>Students learn to identify customer needs, sales trends, and business opportunities from data.</p>
                 </article>
                 <article class="card">
                     <h3 style="margin-bottom: 12px;">Communicate results</h3>
-                    <p>Recommendations are framed for stakeholders, not just technical audiences, which fits the business emphasis of the program.</p>
+                    <p>Insights are presented as solutions to business problems, helping students communicate clearly with decision-makers and stakeholders.</p>
                 </article>
             </div>
             <div class="tool-row">
@@ -285,15 +318,48 @@
 
         <section class="section">
             <span class="eyebrow">Program advantage</span>
-            <h2 style="font-size: 2rem; margin-bottom: 18px;">Why this page matters in the site draft</h2>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Why the program stands out</h2>
             <div class="grid-2">
                 <article class="card">
-                    <h3 style="margin-bottom: 12px;">Evidence of deeper site planning</h3>
-                    <p>The layout begins organizing mentorship, lab access, industry projects, internships, competitions, and advisory board support into a page visitors can scan.</p>
+                    <h3 style="margin-bottom: 12px;">Applied learning</h3>
+                    <p>Students have 24/7 access to a state-of-the-art analytics lab, specialized software tools, industry datasets, and experiences that extend learning beyond the classroom.</p>
                 </article>
                 <article class="card">
-                    <h3 style="margin-bottom: 12px;">Room for expansion</h3>
-                    <p>This structure can later grow into tabs, accordions, student outcomes, internships, or a full academic catalog summary without rebuilding the page from scratch.</p>
+                    <h3 style="margin-bottom: 12px;">Professional preparation</h3>
+                    <p>The program supports growth in technical ability, business communication, and career readiness while helping students prepare for organizations that rely on data-driven decision-making.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">CIA club</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Club leadership and community</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Led by Steve Sharkey</h3>
+                    <p>Steve Sharkey leads the CIA Club and brings more than 30 years of experience in retail, broadcasting, and publishing.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Built around three themes</h3>
+                    <p>The club experience emphasizes experiences, access, and cohorts so students can grow through opportunities, connections, and community.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">Student achievement</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Team Data Doodlers wins first place</h2>
+            <div class="card" style="padding: 18px; margin-bottom: 18px;">
+                <img src="team-data-doodlers.jpg" alt="Team Data Doodlers after winning first place at the Analytics for Good Hackathon" style="width: 100%; max-height: 560px; object-fit: cover; border-radius: 18px; display: block;">
+            </div>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Competition highlight</h3>
+                    <p>Several CIA students recently competed in the undergraduate division of the Analytics for Good Hackathon at the University of Minnesota Carlson School of Management.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">The winning team</h3>
+                    <p>Team Data Doodlers included Jordan Carlson, Megan Gehling, Ella Green, Reilly Sullivan, Laura Tsai, and Natalya Wilkes, and the team earned first place in the competition.</p>
                 </article>
             </div>
         </section>
@@ -301,11 +367,11 @@
         <section class="section" id="cta">
             <div class="cta">
                 <div>
-                    <span class="eyebrow">Contact planning</span>
-                    <h2 style="font-size: 2rem;">Next-step section draft</h2>
-                    <p>This closing block is an early placeholder for request information, application guidance, and visit campus links.</p>
+                    <span class="eyebrow">Contact</span>
+                    <h2 style="font-size: 2rem;">Next steps</h2>
+                    <p>For more information about the program or CIA Club, contact Steve Sharkey at <a href="mailto:ssharkey@d.umn.edu">ssharkey@d.umn.edu</a>.</p>
                 </div>
-                <a class="button" href="CIA Website.html">Return to homepage</a>
+                <a class="button" href="mailto:ssharkey@d.umn.edu">Email Steve Sharkey</a>
             </div>
         </section>
     </main>
