@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumer Insights &amp; Analytics | Opportunities</title>
+<style>
+    :root {
+        --maroon: #6b0f1a;
+        --maroon-deep: #4f0a13;
+        --gold: #d6ad3d;
+        --paper: #fffaf5;
+        --fog: #f8f0ec;
+        --ink: #24171a;
+        --muted: #6d5a5f;
+        --line: rgba(107, 15, 26, 0.12);
+        --card: rgba(255, 255, 255, 0.84);
+        --shadow: 0 18px 38px rgba(107, 15, 26, 0.12);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+            radial-gradient(circle at top right, rgba(107, 15, 26, 0.12), transparent 28%),
+            linear-gradient(180deg, #fff9f4 0%, #f7ecda 100%);
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+    }
+
+    .topnote {
+        background: var(--maroon-deep);
+        color: white;
+        text-align: center;
+        padding: 10px 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.9rem;
+        letter-spacing: 0.04em;
+    }
+
+    header {
+        padding: 22px 0 10px;
+    }
+
+    .crumbs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+    }
+
+    .crumbs a,
+    .mini-nav a {
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        color: var(--maroon);
+    }
+
+    .mini-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 18px;
+    }
+
+    .mini-nav a {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(107, 15, 26, 0.08);
+        border: 1px solid rgba(107, 15, 26, 0.12);
+        font-size: 0.9rem;
+    }
+
+    .hero,
+    .section {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        box-shadow: var(--shadow);
+    }
+
+    .hero {
+        padding: 34px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        right: -50px;
+        bottom: -50px;
+        width: 220px;
+        height: 220px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(214, 173, 61, 0.22), rgba(214, 173, 61, 0) 70%);
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 7px 12px;
+        border-radius: 999px;
+        background: rgba(107, 15, 26, 0.1);
+        color: var(--maroon);
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 0.14em;
+        font-size: 0.76rem;
+        font-weight: 700;
+    }
+
+    h1, h2, h3 {
+        margin: 0;
+        line-height: 1.08;
+    }
+
+    h1 {
+        font-size: clamp(2.4rem, 4vw, 4.2rem);
+    }
+
+    p, li {
+        color: var(--muted);
+        line-height: 1.72;
+    }
+
+    main {
+        padding: 22px 0 56px;
+    }
+
+    .section {
+        margin-top: 22px;
+        padding: 30px;
+        scroll-margin-top: 24px;
+    }
+
+    .grid-2,
+    .grid-3 {
+        display: grid;
+        gap: 18px;
+    }
+
+    .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        padding: 22px;
+    }
+
+    .quote-band {
+        margin-top: 22px;
+        padding: 28px 30px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(79, 10, 19, 0.97), rgba(107, 15, 26, 0.92));
+        box-shadow: var(--shadow);
+    }
+
+    .quote-band strong,
+    .quote-band p {
+        color: white;
+    }
+
+    .quote-band p {
+        color: rgba(255, 255, 255, 0.82);
+        margin: 12px 0 0;
+    }
+
+    .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 22px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        background: var(--maroon);
+        color: white;
+    }
+
+    @media (max-width: 900px) {
+        .grid-2,
+        .grid-3 {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 620px) {
+        .wrap {
+            width: min(1120px, calc(100% - 22px));
+        }
+
+        .hero,
+        .section,
+        .quote-band {
+            padding: 22px;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="topnote">University of Minnesota Duluth | CIA Opportunities</div>
+
+    <header class="wrap">
+        <div class="crumbs">
+            <a href="index.html">&larr; Back to main page</a>
+            <a href="program-details.html">Program details</a>
+        </div>
+    </header>
+
+    <main class="wrap">
+        <section class="hero">
+            <span class="eyebrow">Opportunities</span>
+            <h1>Experiences, access, and support built into the CIA path</h1>
+            <p>
+                Consumer Insights &amp; Analytics is designed to give students more than coursework. The program also emphasizes client projects, competitions, internships, scholarships, mentoring, and a strong cohort and alumni network.
+            </p>
+            <div class="mini-nav">
+                <a href="#client-projects">Client Projects</a>
+                <a href="#competitions">Competitions</a>
+                <a href="#internships">Internships</a>
+                <a href="#scholarships">Scholarships</a>
+                <a href="#mentors">Mentors</a>
+                <a href="#alumni">Alumni Network</a>
+            </div>
+        </section>
+
+        <section class="section" id="client-projects">
+            <span class="eyebrow">Client projects</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Applied work with real business context</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Real-world analysis</h3>
+                    <p>Students are trained to transform consumer and transaction data into business recommendations, then present those findings as actionable solutions to real-world problems.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Professional presentation</h3>
+                    <p>The major emphasizes presenting insights to executives, identifying trends, and communicating current recommendations with confidence.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="competitions">
+            <span class="eyebrow">Competitions</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Regional and national competition experience</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Analytics Club involvement</h3>
+                    <p>Active members of the Analytics Club participate in regional undergraduate competitions, giving students chances to solve real problems under pressure and work as a team.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Winning culture</h3>
+                    <p>Student success stories like Team Data Doodlers show that CIA students are building the confidence and preparation needed to compete successfully beyond campus.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="internships">
+            <span class="eyebrow">Internships</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Internships with strong support</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">In-house internship program</h3>
+                    <p>According to the official UMD academics page, LSBE has a dedicated internship director who helps oversee more than 200 internships annually and works with both students and employers.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Top internship destinations</h3>
+                    <p>Students have secured internships at organizations such as 3M, Google, Hormel, Fastenal, Land O’Lakes, Minnesota Vikings, Target, UnitedHealth Group, Sherwin-Williams, Taylor Corporation, and SPS Commerce.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="scholarships">
+            <span class="eyebrow">Scholarships</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Funding and professional support</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">LSBE scholarships</h3>
+                    <p>The official UMD academics page notes that LSBE awards more than 150 scholarships each year to students across business majors and academic paths.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Certification support</h3>
+                    <p>Students also receive certification exam preparation and paid exam fees for Tableau and Power BI, adding another practical advantage for internships and early career opportunities.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="mentors">
+            <span class="eyebrow">Mentors</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Guidance from experienced leaders</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Program leadership</h3>
+                    <p>The official UMD academics page highlights that the program director brings more than 30 years of experience in retail, broadcast television, and magazine publishing, and supports teaching, internships, networking, and the advisory council.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Professional development</h3>
+                    <p>Students also benefit from professional development opportunities such as the Passport Program, LSBE Company Days, guest speakers, and connections through the CIA Club and broader business community.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="alumni">
+            <span class="eyebrow">Alumni network</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">A cohort that continues beyond graduation</h2>
+            <div class="grid-2">
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Selected cohort model</h3>
+                    <p>Your recruiting materials describe the program as a selected group of top students and alumni, reinforcing the idea that CIA is both an academic path and a close professional network.</p>
+                </article>
+                <article class="card">
+                    <h3 style="margin-bottom: 12px;">Lifelong connections</h3>
+                    <p>Student testimonials from the recruiting packet emphasize friendships, shared problem-solving, and lasting connections that continue far beyond graduation.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="quote-band">
+            <span class="eyebrow" style="background: rgba(255,255,255,0.14); color: white;">Recruiting focus</span>
+            <strong>
+                The CIA experience is built around three things students remember most: meaningful experiences, access to real opportunities, and a cohort community that feels personal and lasting.
+            </strong>
+            <p>
+                Source material used on this page came from your recruiting PDF and the official UMD academics page for the Consumer Insights &amp; Analytics B.B.A.
+            </p>
+        </section>
+
+        <section class="section">
+            <span class="eyebrow">Contact</span>
+            <h2 style="font-size: 2rem; margin-bottom: 18px;">Take the next step</h2>
+            <p>To ask questions about the program, contact Steve Sharkey at <a href="mailto:ssharkey@d.umn.edu">ssharkey@d.umn.edu</a>, visit LSBE 212B, or call 218-726-6632.</p>
+            <a class="button" href="https://lsbe.d.umn.edu/cia">Apply now</a>
+        </section>
+    </main>
+</body>
+</html>
